@@ -6,7 +6,7 @@ const PORT = 3000;
 
 io.on('connection', function (socket) {
     console.log('Birileri Geldi');
-    
+
     socket.on("send_message",function (data){
         io.emit("sender",{
             message : data.mesaj
